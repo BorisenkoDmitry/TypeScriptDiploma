@@ -1,0 +1,260 @@
+@media (max-width: 1440px) {
+    .playlist__h3 {
+        font-size: 24px;
+    }
+    .playlist__item {
+        width: calc((100% - 30px*3) / 4);
+        &:not(:nth-child(3n)) {
+            margin-right: 0;
+        }
+        &:not(:nth-child(4n)) {
+            margin-right: 30px;
+        }
+    }
+}
+@media(max-width: 1300px) {
+    .content-wrap {
+        flex-direction: column;
+    }
+    .header__logo {
+        padding-left: 46px;
+        padding-right: 46px;
+        justify-content: flex-start;
+    }
+    .aside {
+        max-width: 100%;
+        padding: 20px 46px;
+    }
+    .aside__list {
+        display: flex;
+        align-items: center;
+    }
+    .aside__item {
+        margin-right: 10px;
+        max-width: max-content;
+    }
+    .aside__btn {
+        min-width: max-content;
+        display: inline-flex;
+        border-radius: 30px;
+        background-color: #fff;
+    }
+    .aside__btn.aside__btn-active {
+        background-color: var(--color-promo);
+        color: #fff;
+    }
+    .aside__btn.aside__btn-active path {
+        stroke: #fff;
+        
+    }
+}
+
+@media(max-width: 992px) {
+    .playlist__item {
+        width: calc((100% - 30px*2) / 3);
+        &:not(:nth-child(4n)) {
+            margin-right: 0px;
+        }
+        &:not(:nth-child(3n)) {
+            margin-right: 30px;
+        }
+        
+    }
+    .header__user {
+        margin-left: auto;
+    }
+    .aside__nav {
+        display: flex;
+        align-items: center;
+    }
+    .header__search {
+        position: absolute;
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
+        top: 0;
+        transform: translateX(-102%);
+        transition: transform .3s ease-in-out;
+    }
+    .header__search.search--active {
+        transform: translateX(0%);
+    }
+    .header__search__field {
+        background-color: #fff;
+        box-shadow: 2px 5px 35px -18px;
+        height: 60px;
+        background-position: left 2% center;
+    }
+    .search__btn-open  {
+        display: flex;
+        background-color: #fff;
+        min-width: 44px;
+        width: 100%;
+        border-radius: 100%;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+    .tracks__header,
+    .data__text,
+    .tracks__item__time,
+    .player__value {
+        display: none;
+    }
+    .tracks__item__albom,
+    .tracks__item__data {
+        flex: 4;
+        max-width: none;
+    }
+    .tracks__item__name {
+        max-width: none;
+        flex: 8;
+    }
+    
+}
+@media(max-width: 768px) {
+    .playlist__item {
+        width: calc((100% - 30px) / 2);
+        &:not(:nth-child(3n)) {
+            margin-right: 0px;
+        }
+        &:not(:nth-child(2n)) {
+            margin-right: 30px;
+        }
+        
+    }
+    .tracks__item__albom {
+        display: none;
+    }
+    .tracks__item__data {
+        flex: 0;
+    }
+    .player {
+        flex-direction: column;
+
+    }
+}
+@media(max-width: 576px) {
+    .playlist__item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        &:not(:nth-child(2n)) {
+            margin-right: 0px;
+        }
+        background-color: #fff;
+        
+    }
+
+    .aside__btn {
+        font-size: 14px;
+    }
+    .aside__btn svg {
+        width: 17px;
+    }
+    .playlist__img {
+        margin-bottom: 0;
+        margin-right: 20px;
+        height: 100%;
+        width: 99px;
+    }
+    .playlist__content {
+        flex: 1;
+    }
+    .playlist__h3 {
+        font-size: 18px;
+    }
+    .playlist__count {
+        font-size: 12px;
+    }
+    .track__name {
+        margin-bottom: 4px;
+    }
+    .track__content {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .header__logo {
+        padding: 0;
+        margin-right: auto;
+    }
+    .track__name__link {
+        font-size: 18px;
+    }
+    .header__search {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .header__logo svg {
+        width: 115px;
+    }
+    .header {
+        padding: 17px 16px;
+    }
+    .header__user {
+        font-size: 12px;
+        background-color: transparent;
+        padding: 0;
+        max-width: max-content;
+    }
+    .header__user__text {
+        margin: 0;
+    }
+    .player__shaffle-btn,
+    .player__skipback-btn,
+    .player__skipnext-btn,
+    .player__repeat-btn,
+    .tracks__item__number,
+    .header__user__svg {
+        display: none;
+    }
+    .player {
+        position: relative;
+    }
+    .player__play-btn {
+        position: absolute;
+        top: 14px;
+        right: 16px;
+    }
+    .player__controls__header button:not(:last-child)  {
+        margin: 0;
+    }
+    .player__track-name {
+        max-width: 100%;
+        padding-right: 50px;
+    }
+    .player {
+        padding: 14px 16px;
+    }
+    .main {
+        padding: 0px 16px 30px 16px;
+        background-color: var(--color-greybg)
+    }
+    .tracks__item {
+        background-color: #fff;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .tracks__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .player__track__h3 {
+        font-size: 14px;
+    }
+    .track__name__link:before {
+        border: none;
+    }
+    .header__search {
+        left: 0;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .aside {
+        padding: 20px 16px;
+    }
+}

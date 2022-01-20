@@ -1,0 +1,27 @@
+-
+    var playListArray = [
+        {img: {high: 'img/playlists%20(1).jpg', middle: 'img/playlists__1440%20(1).jpg', low: 'img/playlists__360%20(1).jpg'}, h3: "Любимые песни", count: "58 треков"},
+        {img: {high: 'img/playlists%20(2).jpg', middle: 'img/playlists__1440%20(2).jpg', low: 'img/playlists__360%20(2).jpg'}, h3: "Плейлист #1", count: "58 треков"},
+        {img: {high: 'img/playlists%20(3).jpg', middle: 'img/playlists__1440%20(3).jpg', low: 'img/playlists__360%20(3).jpg'}, h3: "Плейлист #2", count: "58 треков"},
+        {img: {high: 'img/playlists%20(4).jpg', middle: 'img/playlists__1440%20(4).jpg', low: 'img/playlists__360%20(4).jpg'}, h3: "Плейлист #3", count: "58 треков"},
+        {img: {high: 'img/playlists%20(5).jpg', middle: 'img/playlists__1440%20(5).jpg', low: 'img/playlists__360%20(5).jpg'}, h3: "Плейлист #4", count: "58 треков"},
+        {img: {high: 'img/playlists%20(6).jpg', middle: 'img/playlists__1440%20(6).jpg', low: 'img/playlists__360%20(6).jpg'}, h3: "Плейлист #5", count: "58 треков"},
+        {img: {high: 'img/playlists%20(7).jpg', middle: 'img/playlists__1440%20(7).jpg', low: 'img/playlists__360%20(7).jpg'}, h3: "Плейлист #6", count: "58 треков"},
+        {img: {high: 'img/playlists%20(8).jpg', middle: 'img/playlists__1440%20(8).jpg', low: 'img/playlists__360%20(8).jpg'}, h3: "Плейлист #7", count: "58 треков"},
+
+    ]
+
+
+section.playlist.section.tabs-content(data-target="playlists")
+    h2.playlist__h2.visually-hidden Плейлисты
+    ul.playlist__list
+        each val, index in playListArray
+            li.playlist__item
+                picture
+                    source(srcset=val.img.low media="(max-width: 576px)")
+                    source(srcset=val.img.middle media="(max-width: 1440px)")
+                    img.playlist__img(src=val.img.high, alt=val.h3)
+                .playlist__content 
+                    h3.playlist__h3
+                        a.playlist__h3__link(href="/")= val.h3
+                    span.playlist__count= val.count

@@ -1,0 +1,207 @@
+.main {
+    padding: 35px 53px 35px 46px;
+    flex: 1;
+}
+.tabs-content {
+    display: none;
+}
+.title__h2 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.tracks__header {
+    color: var(--color-greytxt);
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &__number {
+        width: 100%;
+        max-width: 40px;
+    }
+    &__name {
+        max-width: 434px;
+        width: 100%;
+    }
+    &__albom {
+        max-width: 363px;
+        width: 100%;
+        @media (max-width: 1440px) {
+            max-width: 262px;
+        }
+
+    }
+    &__data {
+        width: 100%;
+        max-width: 488px;
+        margin-right: auto;
+        @media (max-width: 1440px) {
+            max-width: 239px;
+        }
+    }
+    &__time {
+        width: 100%;
+        max-width: 200px;
+        @media (max-width: 1440px) {
+            max-width: 99px;
+        }
+    }
+}
+
+.tracks {
+    
+    &__list {
+
+    }
+    &__item {
+        position: relative;
+        padding-top: 14px;
+        padding-bottom: 14px;
+
+        align-items: center;
+        &__number {
+            width: 100%;
+            max-width: 40px;
+        }
+        &__name {
+            max-width: 434px;
+            padding-right: 10px;
+            width: 100%;
+            align-items: center;
+            display: flex;
+        }
+        &__albom {
+            max-width: 363px;
+            width: 100%;
+            padding-right: 22px;
+            white-space: nowrap; 
+            overflow: hidden; 
+            text-overflow: ellipsis;
+            @media (max-width: 1440px) {
+                max-width: 262px;
+            }
+        }
+        &__data {
+            width: 100%;
+            max-width: 488px;
+            padding-right: 10px;
+            margin-right: auto;
+            color: var(--color-greytxt);
+            font-weight: bold;
+            @media (max-width: 1440px) {
+                max-width: 239px;
+            }
+
+        }
+        &__like {
+            margin-right: 18px;
+        }
+        &__time {
+            width: 100%;
+            max-width: 157px;
+            @media (max-width: 1440px) {
+                max-width: 56px;
+            }
+        }
+        &__drop {
+            width: 100%;
+            max-width: 43px;
+        }
+    }
+}
+
+.track {
+    &__img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        object-position: center;
+        margin-right: 10px;
+    }
+    &__name {
+        margin-bottom: 10px;
+        &__link {
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-top: 1px solid var(--color-greyDarkerbg);
+                border-bottom: 1px solid var(--color-greyDarkerbg);
+            }
+        }
+    }
+    &__author {
+        color: var(--color-greytxt);
+        font-weight: 500;
+        font-size: 12px;
+    }
+    &__like-btn {
+        position: relative;
+        z-index: 2;
+        &.like-btn--active path {
+            fill: var(--color-promo);
+        }
+        & path {
+            fill: var(--color-greytxt);
+        }
+    }
+    &__btn-dropdown {
+        position: relative;
+        z-index: 2;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        border: 1px solid transparent;
+        transition: transform var(--transition-duration) ease-in-out;
+        &.btn-dropdown--active {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.data__text {
+    margin-right: auto;
+}
+
+
+.section.section--active {
+    display: block;
+}
+.tracks__item__drop {
+    position: relative;
+}
+.track__dropdown {
+    position: absolute;
+    z-index: 100;
+    filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.05));
+    background-color: #fff;
+    right: 0;
+    min-width: max-content;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    &.dropdown--active {
+        display: flex;
+    }
+    & button {
+        
+        padding: 10px 18px;
+        transition: background-color var(--transition-duration) ease-in-out, color var(--transition-duration) ease-in-out;
+        @media (min-width: 1200px) {
+            &:hover {
+                background-color: var(--color-promo);
+                color: #fff;
+            }
+        }
+    }
+}
+
+@import "./playlists.scss";

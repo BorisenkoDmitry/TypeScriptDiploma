@@ -1,0 +1,116 @@
+/* block effects start -------------------*/
+@media (min-width: 1200px) {
+    .header__search__field:hover {
+        opacity: 0.6;
+    }
+    .header__user:hover {
+        opacity: 0.6;
+    }
+    .header__logo:hover .logo__icone {
+        fill: #FF8962;
+    }
+    .header__logo:hover .logo__text {
+        fill: grey;
+    }
+    .aside__btn:hover {
+        background-color: #fff;
+    }
+ 
+
+    .track__name__link:hover {
+        color: var(--color-promo);
+    }
+    .track__name__link:hover::before {
+        border-color: var(--color-promo);
+    }
+
+    .track__like-btn:hover path {
+        fill: var(--color-promo);
+    }
+    .track__btn-dropdown:hover circle {
+        fill: var(--color-promo);
+    }
+    .track__btn-dropdown:hover {
+        border-color: var(--color-greyBgBtn);
+    }
+}
+.track__btn-dropdown:focus {
+    outline: none;
+    border-color: var(--color-greyBgBtn);
+}
+.track__btn-dropdown:focus circle {
+    fill: var(--color-promo);
+}
+.track__btn-dropdown:active svg {
+    transform: rotate(90deg);
+}
+.track__btn-dropdown svg {
+    transition: transform var(--transition-duration) ease-in-out;
+}
+.track__name__link::before,
+.track__btn-dropdown {
+    transition: border-color var(--transition-duration) ease-in-out;
+}
+.track__name__link {
+    transition: color var(--transition-duration) ease-in-out;
+}
+.track__like-btn path,
+.track__btn-dropdown circle {
+    transition: fill var(--transition-duration) ease-in-out;
+}
+
+
+.track__name__link:focus {
+    color: var(--color-promo);
+}
+.track__name__link:focus::before {
+    border-color: var(--color-promo);
+}
+
+.track__like-btn:focus-visible path {
+    fill: var(--color-promo);
+}
+.track__name__link:focus-visible,
+.track__like-btn:focus-visible {
+    outline: none;
+}
+
+.aside__btn {
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: var(--transition-duration);
+}
+.header__search__field, .header__user {
+    outline: 2px solid transparent;
+    transition-property: outline-color, opacity, background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: var(--transition-duration);
+}
+.header__search__field:focus-visible,
+.header__user:focus-visible {
+    outline-color: var(--color-greyDarkerbg);
+}
+
+
+.logo__icone, .logo__text {
+    transition: fill var(--transition-duration) ease-in-out;
+}
+.header__logo:focus-visible {
+    outline: 0;
+}
+.header__logo:focus-visible .logo__icone {
+    fill: #FF8962;
+}
+.header__logo:focus-visible .logo__text {
+    fill: grey;
+}
+.header__user:active {
+    opacity: 1;
+    background-color: var(--color-greyDarkerbg);
+}
+.aside__btn:focus {
+    outline: none;
+    background-color: #fff;
+}
+
+/* block effects end -------------------*/
