@@ -799,7 +799,7 @@ body {
 }
 
 .main {
-  padding: 35px 53px 35px 46px;
+  padding: 35px 53px 145px 46px;
   flex: 1;
 }
 
@@ -973,7 +973,8 @@ body {
 .track__dropdown {
   position: absolute;
   z-index: 100;
-  filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.05));
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+  border: 1px solid var(--color-greytxt);
   background-color: #fff;
   right: 0;
   min-width: max-content;
@@ -1082,6 +1083,12 @@ body {
   margin-bottom: 10px;
 }
 
+.player__shaffle-btn svg,
+.player__repeat-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
 .player__controls {
   max-width: 902px;
   width: 100%;
@@ -1178,6 +1185,8 @@ body {
   width: 100%;
   background-color: #fff;
   z-index: 105;
+  border-top: 1px solid var(--color-greytxt);
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
 }
 
 @media (min-width: 1200px) {
@@ -1533,7 +1542,7 @@ body {
   }
 
   .main {
-    padding: 0px 16px 30px 16px;
+    padding: 0px 16px 145px 16px;
     background-color: var(--color-greybg);
   }
 

@@ -1,6 +1,13 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+  function paddingMain() {
+    var heightFooter = document.querySelector(".footer").clientHeight;
+    document.querySelector(".main").style.paddingBottom = heightFooter + 35 + "px";
+  }
+
+  window.addEventListener("resize", paddingMain);
+  paddingMain();
   var slider = document.getElementById('range-play');
   noUiSlider.create(slider, {
     start: 40,
